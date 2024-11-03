@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <limits.h>
+#include <float.h>
+#include <math.h>
+
+int main() {
+     int a,b,c;
+     printf("\nInsert three integer numbers a, b and c:");
+     scanf("%d%d%d", &a, &b, &c);
+     if(a < b && a < c) {
+          printf("min_val - a = %d\n", a);
+     } else if(b < c && b < a) {
+          printf("min_val - b = %d\n", b);
+     } else {
+          printf("min_val - c = %d\n", c);
+     }
+     return 0;
+}
