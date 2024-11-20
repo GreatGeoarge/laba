@@ -1,13 +1,23 @@
 #include <stdio.h>
 #include <math.h>
 
- double factorial(int n) {
+double factorial(int n) {
         double res = 1;
         for(int i = 1; i <= n; i++) {
             res *= i;
         }
         return res;
     }
+
+double degree(int n, double x) {
+    double resX = x;
+    int amount = n*2 + 1;
+    for(int j = 0; j < amount; j++) {
+        resX = resX * x;
+    }
+    return resX;
+
+}
 
 int main() {
     double x,e;
@@ -29,7 +39,7 @@ int main() {
     
     while(fabs(term) >= e) {
         n++;
-        term = pow(-x, 2 * n + 1)/factorial(2 * n);
+        term = degree(n, x)/factorial(2 * n);
         sum += term;
         count++;
     }
@@ -38,6 +48,8 @@ int main() {
     printf("Количество учтенных слогаемых = %d\n", count);
     return 0;
 }  
+
+
    
 
 
