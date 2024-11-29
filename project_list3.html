@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list3</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+     }
+        .flag {
+            width: 150px;
+            height: 150px;
+            background-color: rgb(192, 10, 10);
+            position: relative;
+            border: 1px solid black;
+            margin-left: 38px;
+        }
+        .flag::before, .flag::after {
+            content: '';
+            position: absolute;
+            background-color: white;
+            border-radius: 7px;
+        }
+        .flag:before {
+            width: 35px;
+            height: 65%;
+            top: 17%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .flag:after {
+            width: 65%;
+            height: 35px;
+            top: 50%;
+            left: 17%;
+            transform: translateY(-50%);  
+        }
+    </style>
+</head>
+<body>
+    <h1>Вариант 3</h1>
+
+    <div style="margin-top: 50px;">
+
+    <form action="" method="post">
+    <label for="cities"></label><br>
+    <textarea name="cities" id="cities" rows="4" cols="20">Города: Омск, Новосибирск, Томск</textarea><br>
+
+    <label for="city"></label><br>
+    <input type="radio" id="omsk" name="city" value="Омск">
+    <label for="omsk"> Омск</label><br>
+    <input type="radio" id="novosibirsk" name="city" value="Новосибирск">
+    <label for="novosibirsk">Новосибирск</label><br>
+    <input type="radio" id="tomsk" name="city" value="Томск">
+    <label for="tomsk">Томск</label><br>
+
+    <label for="passsword"></label><br>
+    <input type="password" id="password" name="password" required><br>
+
+    <label for="city-select"></label><br>
+    <select name="city-select" id="city-select">
+        <option value="Новосибирск">Новосибирск</option>
+        <option value="Омск">Омск</option>
+        <option value="Томск">Томск</option>
+    </select><br><br><br><br>
+    <button type="submit" value="Отправить">Отправить</button>
+    <button type="reset" value="Сбросить">Сбросить</button><br><br>
+    </form>
+    </div>
+    <div class="flag">
+
+    </div>
+
+</body>
+</html>

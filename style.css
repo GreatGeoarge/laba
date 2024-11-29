@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 3px;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.content {
+    display: block;
+    grid-template-areas: 
+    "header" 
+    "main"
+    "footer";
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    height: 50vh;
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(206, 172, 240);
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr ;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+     "nav nav aside"
+     "selection selection aside"
+     "footer footer footer";
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(206, 172, 240);
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(206, 172, 240) ;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(232, 64, 162);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.nav {
+    flex: 1;
+    background-color: rgb(238, 208, 240);
+    padding: 10px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.selection {
+    grid-area: selection;
+    display: flex;
+    gap: 10px;
+    background-color: rgb(232, 64, 162);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.selection p {
+    flex: 1;
+    background-color: rgb(238, 208, 240);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    line-height: 25px;
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgb(232, 64, 162);
+    gap: 10px;
+    display: flex;
+    padding: 10px;
+    border: 2px solid black;
+    grid-row: span 2;
+    line-height: 20px;
+    border-radius: 10px;
+}
+.align {
+    flex: 1;
+    background-color: rgb(238, 208, 240);
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+h1 {
+    display: inline-block;
+    width: 900px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 25px 0;
+    font: 800;
+    color: black;
+    text-indent: 30px;
+    border: 2px ridge black;
+    padding: 5px;
+    line-height: 50px;
+    background-color:rgb(238, 208, 240);
+
+}
+
+.button{
+    width: 50px;
+}
+
+ button {
+    position: relative;
+    float: left;
+    border-radius: 10px;
+    border: 1px solid rgb(232, 64, 162);
+    background-color: rgb(238, 208, 240);
+    font-size: 15px;
+    padding: 7px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px;
+    gap: 10px;
+    
+}
+
+.button:hover {
+    background-color: rgb(193, 168, 195);
+    transform: scale(1.05);
+}
+
+footer, main, header, nav, aside, .selection, .selection p, .align, .nav {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.but {
+    width: 50px;
+}
+.but:hover {
+    background-color: rgb(193, 168, 195);
+    transform: scale(1.05);
+}
+
+span {
+    color:blueviolet;
+}
